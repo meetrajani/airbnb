@@ -2,13 +2,15 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
-import Modal from "./components/modals/Modal";
+import RegisterModal from "./components/modals/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 function App() {
   return (
     <div>
       <ClientOnly>
-        <Modal actionLabel='submit' title='Hello world' />
+        <ToasterProvider/>
+        <RegisterModal />
         <Navbar />
       </ClientOnly>
     </div>
